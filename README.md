@@ -1,1 +1,1 @@
-docker-compose file for Auto Portainer and Caddy Server installation
+docker-compose for Portainer Enterprise Edition with Caddy and Caddy Cloudflared Dns for Let's Encrypt ACME plugin.
