@@ -1,0 +1,36 @@
+{
+        acme_dns cloudflare {$CLOUDFLARE_API_TOKEN}
+        email   {$ACME_EMAIL}
+}
+#{
+ #       email xxx@xxx.xyz
+#}
+
+xxxx.cloud {
+    respond " Too Hard! "
+    tls {
+        dns cloudflare xxxxxxxxxxxxxxxx
+    }
+}
+
+xx.xxxx.cloud {
+    reverse_proxy xxxxxx:9000
+    tls {
+        dns cloudflare xxxxxxxxxxx
+    }   
+}
+
+xxx.xxxx.cloud {
+    reverse_proxy http://speedtest-tracker
+    tls {
+        dns cloudflare xxxxxxxx
+    }
+}
+
+xxxx.xxxxx.cloud {
+      reverse_proxy http://speedtest-tracker
+      tls {
+          dns cloudflare xxxxxxx
+      }
+}
+
