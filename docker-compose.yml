@@ -18,7 +18,7 @@ services:
       - 9000:9000
 
   caddy:
-    image: caddy:latest
+    image: slothcroissant/caddy-cloudflaredns:latest
     restart: unless-stopped
     container_name: caddy
     ports:
@@ -30,6 +30,10 @@ services:
       - ./site:/srv
       - ./caddy_data:/data
       - ./caddy_config:/config
+    environment:
+        - CLOUDFLARE_EMAIL=
+        - CLOUDFLARE_API_TOKEN=
+        - ACME_AGREE=true
     networks:
       - caddy
 volumes:
