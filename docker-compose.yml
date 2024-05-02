@@ -26,13 +26,14 @@ services:
       - 443:443
       - 443:443/udp
     volumes:
+      - /etc/localtime:/etc/localtime:ro
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./site:/srv
       - ./caddy_data:/data
       - ./caddy_config:/config
     environment:
-        - CLOUDFLARE_EMAIL=
-        - CLOUDFLARE_API_TOKEN=
+        - ACME_EMAIL=xxxx@xxxx.xyz
+        - CLOUDFLARE_API_TOKEN=xxxxxxx
         - ACME_AGREE=true
     networks:
       - caddy
